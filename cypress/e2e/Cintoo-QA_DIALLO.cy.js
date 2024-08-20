@@ -37,6 +37,7 @@ describe('Cintoo Showcase page', () => {
   it('Check Buy URL', () => {
  
     cy.get('a[href="/buy"]').contains('span','buy now').click()
+    cy.wait(8000)
     cy.url().should('include', '/buy/')
       
   })

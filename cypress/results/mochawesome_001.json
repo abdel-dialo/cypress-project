@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-08-20T12:43:14.780Z",
+    "end": "2024-08-20T12:43:46.082Z",
+    "duration": 31302,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6bac5657-5b1f-4bb1-8c9d-a891dc7ea32d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Cintoo-QA_DIALLO.cy.js",
+      "file": "cypress\\e2e\\Cintoo-QA_DIALLO.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6c6a10f6-69ce-4a48-a609-c80c30e6120f",
+          "title": "Cintoo Showcase page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check the number of demo projects on the showcase page",
+              "fullTitle": "Cintoo Showcase page Check the number of demo projects on the showcase page",
+              "timedOut": null,
+              "duration": 7738,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.lqd-fb-content').should('have.length', numberDemoProject).find('span[data-text=\"Play 3D Demo\"]').should($span => {\n  expect($span).to.contain(textDemoProjet);\n});",
+              "err": {},
+              "uuid": "548a0f1b-fb66-4783-894a-bffe311711ef",
+              "parentUUID": "6c6a10f6-69ce-4a48-a609-c80c30e6120f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check that each project demo contains an image and a button",
+              "fullTitle": "Cintoo Showcase page Check that each project demo contains an image and a button",
+              "timedOut": null,
+              "duration": 6065,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.lqd-fb-content').each(($li, index, $lis) => {\n  // Check  each project demo a button  with the text: \"Play 3D Demo\"\n  cy.get('a.elementor-button>span[data-text=\"Play 3D Demo\"]').eq(index).contains(textDemoProjet);\n  // Check that each project demo contains an image and a button\n  cy.get('div.lqd-fb-img').eq(index).find('img').should('be.visible');\n});",
+              "err": {},
+              "uuid": "52bf54a1-cb5c-4197-85d2-c1ebd338b3e2",
+              "parentUUID": "6c6a10f6-69ce-4a48-a609-c80c30e6120f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check Buy URL",
+              "fullTitle": "Cintoo Showcase page Check Buy URL",
+              "timedOut": null,
+              "duration": 16087,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('a[href=\"/buy\"]').contains('span', 'buy now').click();\ncy.wait(8000);\ncy.url().should('include', '/buy/');",
+              "err": {},
+              "uuid": "530cb45e-5e77-4486-850e-b00a488758de",
+              "parentUUID": "6c6a10f6-69ce-4a48-a609-c80c30e6120f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "548a0f1b-fb66-4783-894a-bffe311711ef",
+            "52bf54a1-cb5c-4197-85d2-c1ebd338b3e2",
+            "530cb45e-5e77-4486-850e-b00a488758de"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 29890,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

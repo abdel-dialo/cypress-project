@@ -9,4 +9,11 @@ module.exports = defineConfig({
             
     showcase_url:  'showcase/',
 },
+reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/results',
+    overwrite: false,
+    html: true,
+    json: true,
+  },
 });
