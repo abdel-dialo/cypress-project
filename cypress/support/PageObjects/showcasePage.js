@@ -5,10 +5,7 @@ class showcasePage {
     projetDemoText : () => cy.get('span[data-text="Play 3D Demo"]'),
     projetDemoButton : () => cy.get('a.elementor-button>span[data-text="Play 3D Demo"]'),
     projetDemoImage : () => cy.get('div.lqd-fb-img'),
-    buyButton : () => cy.get('a[href="/buy"]').contains('span','buy now'),
-
-
-    
+    projetDemoImage : () => cy.get('div.lqd-fb-img'),
   } 
 }
 export default showcasePage;
